@@ -1,0 +1,31 @@
+.navbar-container__svg {
+  width: 25px;
+  cursor: pointer;
+}
+
+.navbar__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 15px;
+  height: 7rem;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  position: sticky;
+}
+
+.navbar__container-links {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.navbar__title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #000;
+  width: 100%;
+  margin-left: 5.5rem;
+  text-align: center;
+  word-spacing: 0.2rem;
+}
