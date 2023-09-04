@@ -1,11 +1,11 @@
 import CarouselImg from '../components/Carousel/Carousel';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import SneakerList from '../components/SneakerList/SneakerList';
+import GamesList from '../components/GamesList/GamesList';
 
 const Home = () => (
   <main>
     <CarouselImg />
-    <SneakerList />
+    <GamesList />
   </main>
 );
 

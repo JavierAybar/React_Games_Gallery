@@ -1,35 +1,20 @@
 import Carousel from 'react-bootstrap/Carousel';
 import styled from 'styled-components';
-import captura2 from '../../assets/Captura de pantalla 2023-08-30 203153.png';
-import capturta from '../../assets/Captura de pantalla 2023-08-23 193816.png';
+import gameImg from '../../assets/imagen1.jpg';
+import gameImg2 from '../../assets/imagen2.jpg';
+import gameImg3 from '../../assets/imagen3.jpg';
 
 function CarouselImg() {
   return (
     <Carousel fade>
       <Carousel.Item>
-        <Img src={capturta} alt="asd" />
-        <Carousel.Caption>
-          <h3>First slide label</h3>
-          <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-        </Carousel.Caption>
+        <Img src={gameImg} alt="asd" />
       </Carousel.Item>
       <Carousel.Item>
-        <Img src={captura2} alt="asd" />
-        <Carousel.Caption>
-
-          <h3>Second slide label</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-        </Carousel.Caption>
+        <Img src={gameImg2} alt="asd" />
       </Carousel.Item>
       <Carousel.Item>
-        <Img src={capturta} alt="asd" />
-        <Carousel.Caption>
-
-          <h3>Third slide label</h3>
-          <p>
-            Praesent commodo cursus magna, vel scelerisque nisl consectetur.
-          </p>
-        </Carousel.Caption>
+        <Img src={gameImg3} alt="asd" />
       </Carousel.Item>
     </Carousel>
   );
@@ -37,7 +22,23 @@ function CarouselImg() {
 
 const Img = styled.img`
   width: 100%;
-  height: 28rem;
-  object-fit: cover;`;
+  height: 22rem;
+  object-fit: fill;
+  
+  @media (min-width: 768px) {
+    height: auto;
+    object-fit: cover;
+  }
+
+  @media (min-width: 1024px) {
+    height: 45rem;
+    object-fit: unset;
+  }
+
+  @media (min-width: 1440px) { 
+    height: 85rem;
+    object-fit: cover;
+  }
+  `;
 
 export default CarouselImg;
