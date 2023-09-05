@@ -8,7 +8,7 @@ function CarouselImg() {
   return (
     <Carousel fade>
       <Carousel.Item>
-        <Img src={gameImg} alt="asd" />
+        <Img src={gameImg} alt="asd" data-testid="carousel-item-1" />
       </Carousel.Item>
       <Carousel.Item>
         <Img src={gameImg2} alt="asd" />

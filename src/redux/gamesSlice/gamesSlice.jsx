@@ -12,10 +12,9 @@ export const getGames = createAsyncThunk('games/getGames', async () => {
   };
   try {
     const response = await axios.request(options);
-    console.log(response.data);
     return response.data;
   } catch (error) {
-    return error.message;
+    return { error: error.message };
   }
 });
 
@@ -33,10 +32,9 @@ export const getGameByCategory = createAsyncThunk('games/getGameByCategory', asy
   };
   try {
     const response = await axios.request(options);
-    console.log(response.data);
     return response.data;
   } catch (error) {
-    return error(error);
+    return { error: error.message };
   }
 });
 
@@ -45,7 +43,7 @@ const initialState = {
   gameByCategory: [],
 };
 
-const gameSlice = createSlice({
+export const gameSlice = createSlice({
   name: 'games',
   initialState,
   reducers: {
