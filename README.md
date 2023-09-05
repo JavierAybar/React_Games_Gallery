@@ -145,29 +145,21 @@ To run tests, run the following command:
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- User Profiles and Data Storage: Allow users to create accounts, customize profiles, store their booking history, mission participations, and personal preferences.
 
-- Immersive Interactive UI: Create an immersive user interface that combines real-time updates with interactive elements. Utilize animations, dynamic transitions, and user-friendly interfaces to make users feel connected to the space exploration experience.
+- User Profiles and Data Storage: Implement user profiles that enable users to create accounts, personalize their profiles, store their game viewing history, and save their game preferences for a tailored experience.
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- FAQ (optional) 
-
-## ❓ FAQ (OPTIONAL) <a name="faq"></a>
-
-> Add at least 2 questions new developers would ask when they decide to use your project.
-
-- **[Question_1]**
-
-  - [Answer_1]
-
-- **[Question_2]**
-
-  - [Answer_2]
+- Immersive Interactive UI: Develop an immersive user interface that blends real-time updates with interactive features. Utilize animations, dynamic transitions, and user-friendly interfaces to enhance users' engagement with the gaming experience, making them feel more connected to the world of gaming.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
--->
+<!-- ACKNOWLEDGEMENTS -->
+
+## 🙏 Acknowledgments <a name="acknowledgements"></a>
+
+
+- Thanks to [Nelson Sakwa](https://www.behance.net/sakwadesignstudio) the [author of the original design](https://www.behance.net/gallery/31579789/Ballhead-App-(Free-PSDs)) Under the [Creative Commons License](https://creativecommons.org/licenses/by-nc/4.0/)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- LICENSE -->
 
