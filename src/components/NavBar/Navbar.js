@@ -45,8 +45,7 @@ const Nav = styled.nav`
   align-items: center;
   padding: 0 10px;
   height: 5rem;
-  background-color: #0a1018;
-  background-image: linear-gradient(to right, #2c336b, #201b33);
+  background-color: #20376d;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
   position: sticky;
 `;
