@@ -14,7 +14,7 @@ export const getGames = createAsyncThunk('games/getGames', async () => {
     const response = await axios.request(options);
     return response.data;
   } catch (error) {
-    return error.message;
+    return { error: error.message };
   }
 });
 
@@ -34,7 +34,7 @@ export const getGameByCategory = createAsyncThunk('games/getGameByCategory', asy
     const response = await axios.request(options);
     return response.data;
   } catch (error) {
-    return error(error);
+    return { error: error.message };
   }
 });
 
