@@ -63,7 +63,7 @@ The Details section provides in-depth information about a selected game from the
 
 ## :movie_camera: WALKTHROUGH <a name="walk-though"></a>
 
-- [Walkthrough video](https://www.loom.com/share/76e21ba7923c4b2ba57292405a3729f4?sid=4a88d68d-e2a4-47e0-b8b7-da91e6406356)
+- [Walkthrough video](https://www.loom.com/share/7bd05b8bb3b349c8a4c8e0887cb0b8c5?sid=7321840d-67a3-4d75-95e0-88bccb0afdd2)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
