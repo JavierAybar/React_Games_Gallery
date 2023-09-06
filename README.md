@@ -15,6 +15,7 @@
     - [Tech Stack ](#tech-stack-)
     - [Key Features ](#key-features-)
     - [🚀 Live Demo](#live-demo)
+    - [🎥Walkthrough](#walk-though)
   - [💻 Getting Started ](#-getting-started-)
     - [Prerequisites](#prerequisites)
     - [Setup](#setup)
@@ -60,6 +61,11 @@ The Details section provides in-depth information about a selected game from the
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
+## :movie_camera: WALKTHROUGH <a name="walk-though"></a>
+
+- [Walkthrough video](https://www.loom.com/share/76e21ba7923c4b2ba57292405a3729f4?sid=4a88d68d-e2a4-47e0-b8b7-da91e6406356)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
