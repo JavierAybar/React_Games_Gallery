@@ -1,27 +1,47 @@
-import Carousel from 'react-bootstrap/Carousel';
 import styled from 'styled-components';
 import gameImg from '../../assets/imagen1.jpg';
-import gameImg2 from '../../assets/imagen2.jpg';
-import gameImg3 from '../../assets/imagen3.jpg';
 
 function CarouselImg() {
   return (
-    <Carousel fade>
-      <Carousel.Item>
-        <Img src={gameImg} alt="asd" data-testid="carousel-item-1" />
-      </Carousel.Item>
-      <Carousel.Item>
-        <Img src={gameImg2} alt="asd" />
-      </Carousel.Item>
-      <Carousel.Item>
-        <Img src={gameImg3} alt="asd" />
-      </Carousel.Item>
-    </Carousel>
+    <Section>
+      <Img src={gameImg} alt="asd" data-testid="carousel-item-1" />
+      <Div>
+        <H2>
+          {' '}
+          Total Games
+          <br />
+          (339)
+        </H2>
+      </Div>
+    </Section>
   );
 }
 
+const H2 = styled.h2`
+  color: #fff;
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin: 0 3rem;
+
+  @media (min-width: 768px) {
+    font-size: 4.5rem;
+  }
+  `;
+
+const Div = styled.div`
+  width: 50%;
+  background-color: #3e60d2;
+  display: flex;
+  align-items: center;
+  `;
+
+const Section = styled.section`
+  margin: 0 auto;
+  display: flex;
+`;
+
 const Img = styled.img`
-  width: 100%;
+  width: 50%;
   height: 22rem;
   object-fit: fill;
   

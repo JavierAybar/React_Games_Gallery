@@ -45,7 +45,7 @@ const Nav = styled.nav`
   align-items: center;
   padding: 0 10px;
   height: 5rem;
-  background-color: #20376d;
+  background-color: #1e3276;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
   position: sticky;
 `;

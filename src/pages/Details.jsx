@@ -128,8 +128,7 @@ const H2 = styled.h2`
   font-size: 2rem;
   font-weight: 500;
   margin: 0;
-  background-color: #0a1018;
-  background-image: linear-gradient(to right, #203c62, #4a627d);
+  background-color: #1e3276;
   color: #fff;
   font-weight: 200;
   padding: 0.3rem;

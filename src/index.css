@@ -16,7 +16,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #0a1018;
+  background-color: #1e3276;
   background-image: linear-gradient(to right, #203c62, #4a627d);
 }
 
@@ -32,6 +32,7 @@ code {
 
 html {
   font-size: 62.5%;
+  background-color: #1e3276;
 }
 
 li {

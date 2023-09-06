@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
-import { useEffect } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { getGameByCategory, getGames } from '../../redux/gamesSlice/gamesSlice';
 
@@ -28,19 +28,53 @@ const genreBackgroundConfig = {
   Social: socialImg,
 };
 
-const gamesGenres = ['Shooter', 'Mmorpg', 'Strategy', 'Fighting', 'Moba', 'Sports', 'Racing', 'Social'];
-
 const GamesList = () => {
+  const defaultCategories = useMemo(() => [
+    'Shooter',
+    'Mmorpg',
+    'Strategy',
+    'Fighting',
+    'Moba',
+    'Sports',
+    'Racing',
+    'Social',
+  ], []);
+
+  const [gameList, setgameList] = useState([defaultCategories]);
+  const [selectedCategory, setSelectedCategory] = useState();
   const games = useSelector((state) => state.games.games);
   const dispatch = useDispatch();
 
-  const filterCategoryLength = (genre) => (
-    games.filter((game) => game.genre.toLowerCase() === genre.toLowerCase()).length
-  );
+  useEffect(() => {
+    setgameList(defaultCategories);
+  }, [defaultCategories]);
+
+  const getFilteredList = () => {
+    if (!selectedCategory || selectedCategory === '') {
+      return gameList;
+    }
+    // eslint-disable-next-line max-len
+    return gameList.filter((category) => category.toLowerCase().includes(selectedCategory.toLowerCase()));
+  };
+
+  const filteredList = useMemo(getFilteredList, [selectedCategory, gameList]);
+
+  const handleCategoryChange = (event) => {
+    setSelectedCategory(event.target.value);
+  };
+
+  const filterCategoryLength = (genre) => {
+    if (typeof genre !== 'string') {
+      return 0;
+    }
+    return games.filter((game) => game.genre.toLowerCase() === genre.toLowerCase()).length;
+  };
 
   useEffect(() => {
-    dispatch(getGames());
-  }, [dispatch]);
+    if (games.length === 0) {
+      dispatch(getGames());
+    }
+  }, [games, dispatch]);
 
   const handleDetailsPage = (genre) => () => {
     dispatch(getGameByCategory(genre));
@@ -50,21 +84,28 @@ const GamesList = () => {
     <Section>
       <H2>
         Category
+        <SearchInput
+          type="text"
+          name="category-search"
+          id="category-search"
+          placeholder="Search category..."
+          onChange={handleCategoryChange}
+        />
       </H2>
       <GridContainer>
-        {gamesGenres.map((game) => (
-          <Card key={game}>
+        {filteredList.map((category) => (
+          <Card key={category}>
             <Button
               type="button"
               style={{
-                backgroundImage: `url(${genreBackgroundConfig[game]})`,
+                backgroundImage: `url(${genreBackgroundConfig[category]})`,
               }}
             >
-              <StyledLink to={`/Details/${game}`}>
-                <GameOverlay onClick={handleDetailsPage(game)}>
+              <StyledLink to={`/Details/${category}`}>
+                <GameOverlay onClick={handleDetailsPage(category)}>
                   <Category>
-                    {game}
-                    {` (${filterCategoryLength(game)})`}
+                    {category}
+                    {` (${filterCategoryLength(category)})`}
                   </Category>
                 </GameOverlay>
               </StyledLink>
@@ -75,6 +116,14 @@ const GamesList = () => {
     </Section>
   );
 };
+
+const SearchInput = styled.input`
+  width: 20rem;
+  height: 2rem;
+  padding: 0.5rem;
+  margin: 0.5rem;
+  font-size: 1.7rem;
+`;
 
 const StyledLink = styled(Link)`
   text-decoration: none;
@@ -89,11 +138,9 @@ const H2 = styled.h2`
   font-weight: 200;
   color: #fff;
   margin: 0;
-  margin-bottom: 0.5rem;
   padding: 0.2rem;
   padding-left: 1rem;
-  background-color: #0a1018;
-  background-image: linear-gradient(to right, #203c62, #4a627d);
+  background-color: #1e3276;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -102,10 +149,8 @@ const H2 = styled.h2`
 const GridContainer = styled.div`
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 0.4rem;
   justify-items: center;
-  background-color: #0a1018;
-  background-image: linear-gradient(to right, #203c62, #4a627d);
+  background-color: #1e3276;
 `;
 
 const Button = styled.button`
@@ -114,12 +159,10 @@ height: 15rem;
 background-size: cover;
 background-position: center;
 position: relative;
-border: 1px solid #9ca5c8;
+border: none;
 cursor: pointer;
 font-size: 1.5rem;
 font-weight: 500;
-border-radius: 16px;
-margin: 4px;
 
 @media (min-width: 768px) {
   height: 25rem;
@@ -158,12 +201,9 @@ const Category = styled.p`
 const Card = styled.div`
   width: 100%;
   height: 100%;
-  background-color: #192330;
   border-radius: 16px;
-  padding: 0.5rem;
   display: flex;
   justify-content: center;
-
 `;
 
 export default GamesList;
