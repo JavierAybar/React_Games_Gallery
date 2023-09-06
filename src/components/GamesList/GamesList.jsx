@@ -118,7 +118,7 @@ const GamesList = () => {
 };
 
 const SearchInput = styled.input`
-  width: 20rem;
+  width: 17rem;
   height: 2rem;
   padding: 0.5rem;
   margin: 0.5rem;
@@ -149,6 +149,7 @@ const H2 = styled.h2`
 const GridContainer = styled.div`
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  gap: 0.4rem;
   justify-items: center;
   background-color: #1e3276;
 `;
@@ -159,10 +160,12 @@ height: 15rem;
 background-size: cover;
 background-position: center;
 position: relative;
-border: none;
+border: 1px solid #9ca5c8;
 cursor: pointer;
 font-size: 1.5rem;
 font-weight: 500;
+border-radius: 16px;
+margin: 4px;
 
 @media (min-width: 768px) {
   height: 25rem;
@@ -201,9 +204,12 @@ const Category = styled.p`
 const Card = styled.div`
   width: 100%;
   height: 100%;
+  background-color: #000000;
   border-radius: 16px;
+  padding: 0.5rem;
   display: flex;
   justify-content: center;
+
 `;
 
 export default GamesList;

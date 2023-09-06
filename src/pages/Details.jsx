@@ -139,9 +139,7 @@ const GridContainer = styled.div`
   display: grid;
   justify-items: center;
   grid-template-columns: repeat(1, 1fr);
-  gap: 0.5rem;
   background-color: #0a1018;
-  background-image: linear-gradient(to right, #0a1018, #272e36);
   > :nth-child(1n){
     color: #fff
   }
@@ -161,6 +159,7 @@ display: flex;
 justify-content: space-between;
 border: none;
 border-radius: 12px;
+margin-top: 0.6rem;
 background-color: #314260;
 `;
 
