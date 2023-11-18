@@ -70,7 +70,7 @@ The Details section provides in-depth information about a selected game from the
 ## 🚀 Live Demo <a name="live-demo"></a>
 
 
-- [Live Demo Link](https://react-game-gallery-5dd33.netlify.app/)
+- [Live Demo Link](https://recipe-app-t2ko.onrender.com)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p> 
 
